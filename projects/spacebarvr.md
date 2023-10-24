@@ -1,7 +1,7 @@
 ---
 layout: spacebarvr.njk
 title: SpacebarVR
-imagePath: /media/spacebarvr/spacebarvr.png
+imagePath: /media/spacebarvr/spacebarvr.PNG
 description: A full-scale room VR game combining fitness and gaming.
 detailedDescription: SpacebarVR transforms aerobic exercise into an engaging VR game, where players hit virtual buttons at a high pace, aiming to maintain a heart rate between 90 - 125 BPM. Evolving from a research project and an initial archery game iteration, the final game challenges users in a full-scale room, offering various events and combinations for a dynamic and competitive exercise experience.
 technologies:
