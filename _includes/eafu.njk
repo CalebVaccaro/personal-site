@@ -1,0 +1,49 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+<div class="project-content">
+  <img
+    src="/media/eafu/eafuexample.gif"
+    alt="Eafu Example"
+    class="ritch-image"
+  />
+  <h3>Key Features</h3>
+  <ul>
+    <li>Simplified HTTP requests (GET, POST, PUT, DELETE)</li>
+    <li>Customizable API creation through inheritance</li>
+    <li>Integrated error handling and loading states</li>
+  </ul>
+
+  <h3>Implementation</h3>
+  <p>Implementing EAFU in a Unity project involves a few steps:</p>
+  <ol>
+    <li>
+      Set Up Azure Functions: Ensure that your backend is ready to receive and
+      respond to requests from Unity.
+    </li>
+    <li>
+      Configure URLs and Keys: Depending on your development stage, you might
+      use Unity Remote Config for production or a local.settings.json file for
+      local development.
+    </li>
+    <li>
+      Create Custom APIs: Inherit from the EAFUApi class and define your
+      endpoints.
+    </li>
+    <li>
+      Initialize and Use Your APIs: Set up your API URLs in Unity and start
+      making requests to your Azure Functions.
+    </li>
+  </ol>
+  <div class="code-container">
+    <code> {{ content | safe }} </code>
+  </div>
+  <p class="centered">
+    <a href="https://github.com/CalebVaccaro/EAFU/" class="project-button"
+      >Check out the project on Github</a
+    >
+  </p>
+</div>
+{% endblock %}

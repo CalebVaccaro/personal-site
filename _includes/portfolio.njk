@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+---
+{% block content %}
+  <!-- Portfolio Page Title -->
+  <h1>{{ title }}</h1>
+
+  <!-- Portfolio Projects List -->
+  <section class="portfolio-projects">
+    {% for project in collections.projects %}
+      {% include "projectPreview.njk" %}
+    {% endfor %}
+  </section>
+{% endblock %}

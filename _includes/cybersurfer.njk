@@ -1,0 +1,27 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+<div class="project-page centered">
+  <div class="project-content">
+    <p>To show off the input system capabilities, I created CyberSurfer, a hoverboard racing game currently in Early Access on Steam.</p>
+
+    <a href="{{ steamURL }}" class="project-button">View on Steam</a>
+    <br>
+    <br>
+    <div class="video-container">
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/C_C8NKgEbKs?si=czY9OFGxH765JNnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <p>Designed from the ground up we implemented our own input system giving players more control over their movement.</p>
+    <img src="/media/cybersurfer/inputsystem.gif" alt="Input System" class="ritch-image" />
+  </div>
+
+  <div class="project-social-links">
+    <a href="https://twitter.com/YourTwitter" class="project-button">Twitter</a>
+    <a href="https://www.youtube.com/c/YourChannel" class="project-button">YouTube</a>
+    <a href="https://www.linkedin.com/in/yourprofile/" class="project-button">LinkedIn</a>
+  </div>
+</div>
+{% endblock %}

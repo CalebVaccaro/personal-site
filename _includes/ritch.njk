@@ -1,0 +1,35 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+<div class="project-content ritch-project">
+  <div class="ritch-image">
+    <img src="/media/ritch/ritchWeb.PNG" alt="RITch Weekly Report" />
+  </div>
+
+  <h3>Core features:</h3>
+  {% for image in images %}
+  <div class="ritch-image">
+    <p><strong>{{ image.caption }}</strong></p>
+    <img src="{{ image.src }}" alt="{{ image.alt }}" />
+  </div>
+  {% endfor %} {# Render videos #}
+  <br>
+  <p>
+    I served as Product Manager at Behavioral Health Clinic for over 4 years,
+    developing RITch and distributing applications to numerous clinics in the
+    Tri-State area. I developed other in-house projects with students that
+    educated and supported people in need.
+  </p>
+  <div class="ritch-inline-images">
+    {% for image in inlineImages %}
+    <img
+      src="{{ image.src }}"
+      alt="{{ image.alt }}"
+      class="ritch-inline-image"
+    />
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

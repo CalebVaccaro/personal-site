@@ -1,0 +1,13 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+<p>{{ content | safe }}</p>
+{% for image in inlineImages %}
+<div class="spacebarvr-inline-image">
+  <p><strong>{{ image.description }}</strong></p>
+  <img src="{{ image.src }}" alt="{{ image.alt }}" />
+</div>
+<br />
+{% endfor %} {% endblock %}
