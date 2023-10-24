@@ -365,3 +365,8 @@ li {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+.site-creation-note {
+    font-size: 0.8em;
+    margin-top: 10px;
+}
