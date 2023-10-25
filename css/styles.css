@@ -125,8 +125,18 @@ h2 {
 
 .video-container {
     position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* for 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .ritch-inline-images,
@@ -369,4 +379,12 @@ li {
 .site-creation-note {
     font-size: 0.8em;
     margin-top: 10px;
+}
+
+.site-creation-note a {
+    color: #ffba51;
+}
+
+.site-creation-note a:hover {
+    color: #ffdead;
 }
