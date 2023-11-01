@@ -2,7 +2,7 @@
 layout: eafu.njk
 title: EAFU
 imagePath: /media/eafu/eafu.png
-description: A open-source lightweight project to connect Azure Services to Unity applications.
+description: An open-source lightweight project to connect Azure Services to Unity applications.
 detailedDescription: After working in backend and game services, I knew there was a need for easy upkeep for game developers. So, I created an open-source lightweight API for Unity to access backend services with minimal setup. Specifically made for Azure Functions, the API can be used for other services, like AWS with a few header changes. I created a sample Unity project to help others understand how it works. 
 technologies:
 - C#
