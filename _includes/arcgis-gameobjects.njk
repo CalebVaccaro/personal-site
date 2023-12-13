@@ -1,0 +1,37 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+
+<p>Arcgis-gameobjects allow unity developers to easily create ArcGIS Location Component GameObjects using a Monobehaviour class to generate location information. The <a href="https://developers.arcgis.com/unity/maps/location-component/#:~:text=The%20ArcGIS%20Location%20component%20is,its%20location%20to%20geographic%20coordinates">ArcGISLocationComponent</a> uses child <a href="https://developers.arcgis.com/unity/api-reference/gameengine/geometry/arcgispoint/">ArcGISPoint</a> object to set the position or rotation. The ArcGISGameObject allows you to send create/update a gameobjects position without having to reference the child `ArcGISPoint` component.</p>
+
+<h1>Features</h1>
+
+<div class="feature">
+    <h3>Populate ArcGIS maps with custom data</h3>
+    <img src="https://github.com/CalebVaccaro/arcgis-gameobjects/raw/main/media/arcgisgameobjects.PNG" alt="Feature 1" class="spacebarvr-inline-image">
+    <p>Use custom JSON to create ArcGISGameObjects. The only requirement is a final output of Latitude and Longitude to set the position of your objects. I use custom location data to create Transit, Bus and Points of Interest in NYC. </p>
+</div>
+
+<div class="feature">
+    <h3>Use Location Data for Custom Functions</h3>
+    <img src="https://github.com/CalebVaccaro/arcgis-gameobjects/raw/main/media/haversine.gif" alt="Feature 2" class="spacebarvr-inline-image">
+    <p>The Geological Information System that underlys ArcGIS and Unity's GIS services, gives us the option for real mathematical formulas using ArcGISGameObjects. In the example project, I use the haversine distance formula to search for the nearest point. The <a href="https://en.wikipedia.org/wiki/Haversine_formula#:~:text=The%20haversine%20formula%20determines%20the,and%20angles%20of%20spherical%20triangles.">Haversine</a> formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.</p>
+</div>
+
+<div class="feature">
+    <h3>Pull data from APIs</h3>
+    <img src="https://github.com/CalebVaccaro/arcgis-gameobjects/raw/main/media/nycopendata.PNG" alt="Feature 3" class="spacebarvr-inline-image">
+    <p>Access data from APIs to instanitate ArcGISGameObjects on the fly. In the Unity example package I use <a href="https://opendata.cityofnewyork.us/">NYCOpendata</a> to create Wifi Hot Spots.</p>
+</div>
+
+<div class="project-page centered">
+    <p>Check it out on Github</p>
+    <div class="project-social-links">
+        <a href="https://github.com/CalebVaccaro/arcgis-gameobjects" class="project-button">Github Repo</a>
+    </div>
+</div>
+
+
+{% endblock %}
