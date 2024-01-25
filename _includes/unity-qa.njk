@@ -1,0 +1,54 @@
+---
+layout: layout.njk
+---
+
+{% block content %}
+  <div class="project-container">
+    <h1 class="project-title">{{ title }}</h1>
+
+    <p>This Unity QA Example project was developed as part of a Game Development workshop aimed at middle schoolers, hosted by the Rochester Community Media Center on October 28th. <br><br> The workshop was designed to introduce young learners to the fundamentals of game development and quality assurance, using Unity's Test Framework to provide a hands-on, interactive learning experience.</p>
+
+    <img class="ritch-image" src="{{ imagePath }}" alt="{{ title }} Screenshot">
+
+    <div class="project-page centered">
+            <a href="https://github.com/CalebVaccaro/QAEventExample" class="project-button">Github</a>
+    </div>
+
+    <div class="project-features">
+      <h2>Features</h2>
+      <ul>
+        <li>Comprehensive guide on installing and using Unity Test Framework.</li>
+        <li>Structured unit tests covering Editor and Play Mode scenarios.</li>
+        <li>Real-world examples including Player-Item interactions and Scene testing.</li>
+        <li>Practical application in a genre-defining Item Collection Adventure game.</li>
+      </ul>
+    </div>
+
+    <div class="resume-image-container">
+        <img class="ritch-image" src="\media\unity-qa\qaeventexample_game.gif" alt="QA Event Example Game"> </img>
+    </div>
+
+
+    <div class="project-scenarios">
+      <h2>Testing Scenarios</h2>
+      <ul>
+        <li><strong>Scene 1:</strong> Basics of Unit Testing (Arrange, Act, Assert).</li>
+        <li><strong>Scene 2:</strong> Testing Player-Item Interaction and Door Accessibility.</li>
+        <li><strong>Scene 3:</strong> Updating Unit Tests for Additional Levels.</li>
+        <li><strong>Scene 4:</strong> Debugging and Resolving Test Failures.</li>
+        <li><strong>Scene 5:</strong> Implementing and Testing Score Subtraction.</li>
+        <li><strong>Scene 6 & 7:</strong> Validating Player Progression.</li>
+        <li><strong>Play-Mode:</strong> Reviewing Unit Tests in Play Mode.</li>
+      </ul>
+    </div>
+    {{ content | safe }}
+  <div class="project-technologies">
+      <h2>Technologies Used</h2>
+      <ul>
+        {% for technology in technologies %}
+          <li>{{ technology }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

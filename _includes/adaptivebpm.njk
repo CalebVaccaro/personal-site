@@ -1,0 +1,29 @@
+---
+layout: project.njk
+---
+
+{% block content %}
+  <div class="project-container">
+    <h1 class="project-title">{{ title }}</h1>
+
+    <div class="project-video">
+      <video width="100%" controls>
+        <source src="/media/adaptivebpm/adaptivebpm-demo.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+<div class="project-page centered">
+            <a href="https://github.com/CalebVaccaro/AdaptiveBPM" class="project-button">Github</a>
+    </div>
+    <div class="project-features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Real-time intensity adjustment based on heart rate</li>
+        <li>Integration with Hyperate API for live data feed</li>
+        <li>Machine Learning model for dynamic experience</li>
+        <li>Unity-based application for robust simulation</li>
+      </ul>
+    </div>
+    
+  </div>
+{% endblock %}
