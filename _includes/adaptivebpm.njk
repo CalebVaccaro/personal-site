@@ -5,21 +5,22 @@ layout: project.njk
 {% block content %}
   <div class="project-container">
     <h1 class="project-title">{{ title }}</h1>
-    <div class="project-video">
-      <video width="50%" controls>
-        <source src="/media/adaptivebpm/adaptivebpm-test.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
 
     <div class="project-video">
-      <video width="100%" controls>
+      <video width="65%" controls>
         <source src="/media/adaptivebpm/adaptivebpm-demo.MOV" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <video width="25%" controls>
+        <source src="/media/adaptivebpm/adaptivebpm-test.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p><b>Left:</b> Heart rate data sent through Hyperate API to predict new game intensity. <br><b>Right:</b> Integration of the AdaptiveBPM SDK into Spacebar VR collecting user data and predicting the next game intensity.</p>
     </div>
-<div class="project-page centered">
-            <a href="https://github.com/CalebVaccaro/AdaptiveBPM" class="project-button">Github</a>
+    <div class="project-video">
+    </div>
+    <div class="project-page centered">
+      <a href="https://github.com/CalebVaccaro/AdaptiveBPM" class="project-button">Github</a>
     </div>
     <div class="project-features">
       <h2>Key Features</h2>
@@ -30,6 +31,5 @@ layout: project.njk
         <li>Unity-based application for robust simulation</li>
       </ul>
     </div>
-    
   </div>
 {% endblock %}
