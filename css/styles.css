@@ -125,8 +125,12 @@ h2 {
 
 .project-video {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically if you also want vertical centering */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Align children vertically in the middle */
+    flex-wrap: wrap; /* Optional: Allows the videos to wrap onto the next line on smaller screens */
+}
+
+.project-video video {
     padding: 1%;
 }
 
