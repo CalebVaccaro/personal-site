@@ -3,3 +3,5 @@
 /node_modules
 .DS_Store
 /media/.DS_Store
+/.idea
+.idea
