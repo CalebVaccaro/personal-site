@@ -1,8 +1,44 @@
-<article class="project">
-    <img src="{{ project.data.imagePath }}" alt="{{ project.data.title }} Screenshot" class="project-image">
-    <div class="project-details">
-        <h2 class="project-title">{{ project.data.title }}</h2>
-        <p class="project-description">{{ project.data.description }}</p>
-        <a href="{{ project.url }}" class="project-button">See More</a>
+<article class="project-card">
+  {# Prefer explicit imagePath frontmatter, then fall back to other keys #}
+  {% set thumb = project.data.imagePath or project.data.project_image or project.data.thumbnail or project.data.image or project.data.cover %}
+  {% if thumb %}
+    {# if path doesn't start with '/' and isn't an absolute http(s) URL, prepend a slash #}
+    {% if thumb.indexOf('/') != 0 and thumb.indexOf('http') != 0 %}
+      {% set thumb = '/' + thumb %}
+    {% endif %}
+  {% endif %}
+
+  <a class="project-link" href="{{ project.url }}">
+    {% if thumb %}
+      <div class="project-thumb">
+        <img
+          src="{{ thumb }}"
+          alt="{{ project.data.title | default(project.fileSlug) }} thumbnail"
+          loading="lazy"
+          decoding="async"
+          data-thumb="{{ thumb }}">
+      </div>
+    {% else %}
+      <div class="project-thumb project-thumb--placeholder" aria-hidden="true">
+        <!-- placeholder; keep decorative -->
+      </div>
+    {% endif %}
+
+    <div class="project-body">
+      <h3 class="project-title">{{ project.data.title or project.fileSlug }}</h3>
+      {% if project.data.description %}
+        <p class="project-excerpt">{{ project.data.description }}</p>
+      {% endif %}
+
+      <div class="project-meta">
+        {% if project.data.tags %}
+          <div class="project-tags">
+            {% for tag in project.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
     </div>
+  </a>
 </article>

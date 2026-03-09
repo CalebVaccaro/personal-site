@@ -5,10 +5,12 @@ layout: layout.njk
 {% block content %}
     <div class="resume-page">
         <h1>{{ title }}</h1>
-        <p>You can download my resume by clicking the link below.</p>
-        <p><a class="resume-link" href="/media/resume/CalebVaccaro-Resume.pdf" target="_blank">View Resume</a></p>
-        <div class="resume-image-container">
-            <img src="/media/resume/flocking.gif" alt="Flocking simulation" />
+
+        <!-- Embed resume PDF directly on the page -->
+        <div class="resume-embed">
+            <object data="/media/resume/CalebVaccaro-Resume.pdf" type="application/pdf" width="100%" height="100%">
+                <p>Your browser does not support embedded PDFs. <a href="/media/resume/CalebVaccaro-Resume.pdf" target="_blank" rel="noopener">Download the resume (PDF)</a>.</p>
+            </object>
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,71 @@
+---
+layout: layout.njk
+---
+{% block content %}
+  <div class="project-container shell">
+    <h1 class="project-title">{{ title }}</h1>
+
+    <p class="project-excerpt">{{ description }}</p>
+
+    <!-- Main screenshot / hero -->
+    {% if imagePath %}
+      <div class="project-hero" style="max-width:1000px; margin:18px auto;">
+        <img src="{{ imagePath }}" alt="{{ title }} dashboard" style="width:100%; height:auto; border-radius:10px; box-shadow:0 12px 30px rgba(0,0,0,0.5);">
+      </div>
+    {% endif %}
+
+    <div class="project-section">
+      <h2>Overview</h2>
+      <p>{{ detailedDescription }}</p>
+    </div>
+
+    <div class="project-section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Import folders of .mp3 / .wav files quickly and index your music.</li>
+        <li>Maintain a Song Bank with BPM/key metadata and custom tags.</li>
+        <li>Create Set Lists with drag & drop ordering and save / recall sets.</li>
+        <li>Link favorite transitions between tracks for quick playback reference.</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Why I Built This</h2>
+      <p>As a DJ I wanted a simple, focused tool to capture the energy of transitions — a place to save combinations that work so I can reproduce the magic in future sets.</p>
+    </div>
+
+    <div class="project-section">
+      <h2>Coming Soon</h2>
+      <ul>
+        <li>Tagging by mood / energy</li>
+        <li>Rekordbox integration: BPM & key detection</li>
+        <li>Improved UX for large libraries</li>
+      </ul>
+    </div>
+
+    <div class="project-section">
+      <h2>Screenshots</h2>
+      <div class="ritch-inline-images" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-top:12px;">
+        <img src="/media/transitionsapp/screenshot1.png" alt="Song Bank" style="width:100%; height:auto; border-radius:8px;">
+        <img src="/media/transitionsapp/screenshot2.png" alt="Set List" style="width:100%; height:auto; border-radius:8px;">
+        <img src="/media/transitionsapp/screenshot3.png" alt="Import Music" style="width:100%; height:auto; border-radius:8px;">
+      </div>
+    </div>
+
+    <div class="project-section">
+      <h2>Technologies</h2>
+      <ul class="project-technologies">
+        {% for tech in technologies %}
+          <li>{{ tech }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div style="margin-top:18px;">
+      <a href="/portfolio/" class="button secondary">Back to Portfolio</a>
+      <!-- add external repo link if/when available -->
+    </div>
+
+    {{ content | safe }}
+  </div>
+{% endblock %}

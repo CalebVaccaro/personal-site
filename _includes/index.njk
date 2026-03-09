@@ -2,15 +2,25 @@
 layout: layout.njk
 ---
 {% block content %}
-<div class="home-page">
-  <img src="/media/home/home.jpg" alt="Caleb Vaccaro" class="home-image">
-  
-  <h1 class="home-title">Welcome to My World</h1>
-  <p class="home-text">Hi, I'm Caleb. As a game developer specializing in immersive experiences, I blend physical and virtual realms in mixed reality applications.</p>
+<div class="home-page shell">
+  <section class="hero home-hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 class="home-title">Welcome to My World</h1>
+        <p class="home-text">Hi, I'm Caleb, a Game Developer and Software Engineer (.NET / SQL). I build immersive mixed-reality experiences and full-stack tools that connect play and production.</p>
 
-  <div class="video-container">
-    <iframe width="480" height="270" src="https://www.youtube.com/embed/C_C8NKgEbKs?si=czY9OFGxH765JNnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+        <div class="hero-ctas">
+          <a href="https://github.com/CalebVaccaro" class="button">View GitHub</a>
+          <a href="https://www.linkedin.com/in/caleb-vaccaro-3a7707120/" class="button secondary">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-hidden="true" style="max-width:360px; min-width:160px;">
+        <img src="/media/home/home.png" alt="" style="width:100%; height:auto; border-radius:8px; display:block; opacity:0.95;">
+      </div>
+    </div>
+  </section>
+
   <br>
   <h2 class="home-subtitle">Connect With Me</h2>
   <a href="https://github.com/CalebVaccaro" class="project-button">GitHub</a>

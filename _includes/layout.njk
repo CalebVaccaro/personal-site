@@ -6,15 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <link rel="icon" href="/media/favicon.png" type="image/png" />
+    <!-- Add Inter font for cleaner typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <a href="/">Home</a> | <a href="/portfolio/">Portfolio</a> |
-        <a href="/resume/">Resume</a> | <a href="/about/">About</a>
+  <body class="{{ pageClass }}">
+    <header class="site-header">
+      <div class="shell">
+        <div class="brand">
+          <a href="/">Caleb Vaccaro</a>
+          <span class="tagline">Game Developer · Software Engineer (.NET / SQL)</span>
+        </div>
+        <nav class="main-nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/portfolio/" class="nav-link">Portfolio</a>
+          <a href="/resume/" class="nav-link">Resume</a>
+          <a href="/about/" class="nav-link">About</a>
+        </nav>
       </div>
     </header>
-    <div class="container">{{ content | safe }}</div>
+
+    <main class="site-main">
+      <div class="shell">
+        {{ content | safe }}
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <!-- Replace the Nunjucks date filter (caused "filter not found: date") with client-side JS -->
+        <p>© <script>document.write(new Date().getFullYear())</script> Caleb Vaccaro. All rights reserved.</p>
+        <p>
+          <a href="https://github.com/CalebVaccaro" class="footer-link">GitHub</a>
+          ·
+          <a href="https://www.linkedin.com/in/caleb-vaccaro-3a7707120/" class="footer-link">LinkedIn</a>
+          ·
+          <a href="mailto:calebvbusiness@gmail.com" class="footer-link">Email</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

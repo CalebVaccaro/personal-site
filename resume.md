@@ -1,4 +1,4 @@
 ---
 layout: resume.njk
-title: Resume
+title: Caleb Vaccaro Resume
 ---

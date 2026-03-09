@@ -2,11 +2,22 @@
 layout: layout.njk
 ---
 {% block content %}
-  <!-- Portfolio Page Title -->
-  <h1>{{ title }}</h1>
+  <!-- Portfolio hero / artistic vision -->
+  <section class="portfolio-hero shell">
+    <div class="portfolio-hero-inner">
+      <div>
+        <h1 class="portfolio-title">{{ title }}</h1>
+        <p class="portfolio-lead">A curated selection of interactive and mixed-reality projects that blend playful experimentation with technical craft. Click a card to explore each project's process, media and downloadable assets.</p>
+      </div>
+      <div class="portfolio-hero-cta">
+        <a class="button" href="/portfolio/">All Projects</a>
+        <a class="button secondary" href="/about/">My Process</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Portfolio Projects List -->
-  <section class="portfolio-projects">
+  <!-- Projects grid -->
+  <section class="portfolio-grid shell" aria-label="Portfolio projects">
     {% for project in collections.projects %}
       {% include "projectPreview.njk" %}
     {% endfor %}

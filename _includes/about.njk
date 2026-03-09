@@ -3,60 +3,81 @@ layout: layout.njk
 ---
 
 {% block content %}
-<div>
-  <div class="about-page">
-    <h1>About Me</h1>
-    <img src="/media/about/about.jpg" alt="Profile Picture" class="top-image" />
-    <h2>My Journey</h2>
-    <p>
-      I started my journey in game development 8 years ago, and since then, I
-      have worked on various projects ranging from small indie games to larger
-      collaborative efforts. My primary focus is on physical immersion and mixed
-      reality, but I have experience in various areas of game development,
-      including Game/Player Physics, Networking, and constructing pipelines to
-      easily distribute products.
-    </p>
+<section class="about-hero shell">
+  <div class="about-hero-inner">
+    <div class="profile-card">
+      <img src="/media/about/about.jpg" alt="Caleb Vaccaro" class="profile-image" />
+      <div class="profile-meta">
+        <h1>Caleb Vaccaro</h1>
+        <p class="muted">Game Developer · Software Engineer (.NET / SQL)</p>
+        <p class="lead">I build immersive experiences and robust software. From mixed-reality prototypes and game systems to .NET backends and SQL-driven tools, I design for both play and production.</p>
 
-    <p>
-      In my free time, I enjoy growing various plants and dancing to keep me on
-      my toes, which I believe contributes to my out-of-the-box thinking in game
-      development.
-    </p>
-
-    <h2>Let's Connect!</h2>
-    <a href="mailto:calebvbusiness@gmail.com" class="project-button"
-      >Email</a
-    >
-    <a
-      href="https://www.linkedin.com/in/caleb-vaccaro-3a7707120/"
-      class="project-button"
-      >LinkedIn</a
-    >
-    <a href="https://github.com/CalebVaccaro" class="project-button">GitHub</a>
-    <p class="site-creation-note">
-      I created the site using
-      <a href="https://www.11ty.dev/" target="_blank">Eleventy</a> and deployed with <a href="https://vercel.com/" target="_blank">Vercel</a>. Check it out
-      on
-      <a href="https://github.com/CalebVaccaro/personal-site" target="_blank"
-        >GitHub</a
-      >.
-    </p>
-    <br />
-    <img
-      src="/media/about/about2.jpg"
-      alt="At Get in the Games event in Buffalo, NY"
-    />
-    <p>
-      Hosted my first "Intro to Game Design" event - May 24th, 2024 Clubhouse
-      Buffalo / Buffalo, NY
-    </p>
-    <img
-      src="/media/about/dayofplay.png"
-      alt="At Get in the Games event in Buffalo, NY"
-    />
-    <p>
-      Participated in the "Day of Play" event - Feburary 5th, 2024 / Montessori Academy School No. 53
-    </p>
+        <div class="contact-ctas">
+          <a href="mailto:calebvbusiness@gmail.com" class="button">Email Me</a>
+          <a href="/portfolio/" class="button secondary">See Portfolio</a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<section class="about-skills shell" aria-label="Skills and tools">
+  <h2>Skills & Tools</h2>
+  <div class="skill-list">
+    <span class="skill">Unity</span>
+    <span class="skill">C# / .NET (Core/Framework)</span>
+    <span class="skill">Azure</span>
+    <span class="skill">CI/CD</span>
+    <span class="skill">ML.NET</span>
+    <span class="skill">Networking (TCP/UDP)</span>
+    <span class="skill">Mixed Reality</span>
+    <span class="skill">Prototyping</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Angular</span>
+    <span class="skill">API Design</span>
+    <span class="skill">System Architecture</span>
+    <span class="skill">Full Stack</span>
+    <span class="skill">Backend Engineer</span>
+  </div>
+</section>
+
+<section class="about-timeline shell" aria-label="Experience">
+  <h2>Selected Work & Roles</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-year">2023–Present</div>
+      <div class="timeline-content">
+        <strong>Indie / Contract Work</strong>
+        <div class="muted">Mixed Reality Prototypes · Game Systems · Technical Art</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2021–2023</div>
+      <div class="timeline-content">
+        <strong>Interactive Installations</strong>
+        <div class="muted">Designing physical-digital experiences for live events and exhibitions.</div>
+      </div>
+    </div>
+
+    <!-- Add more timeline-items here as needed -->
+  </div>
+</section>
+
+<section class="about-gallery shell">
+  <h2>Event Highlights</h2>
+  <div class="gallery-grid">
+    <img src="/media/about/about2.jpg" alt="Event photo" />
+    <img src="/media/about/dayofplay.png" alt="Day of Play" />
+  </div>
+</section>
+
+<section class="about-cta shell">
+  <p>Want to collaborate or learn more about my process?</p>
+  <div>
+    <a href="mailto:calebvbusiness@gmail.com" class="button">Get in touch</a>
+    <a href="https://github.com/CalebVaccaro" class="button secondary">GitHub</a>
+  </div>
+</section>
 {% endblock %}
