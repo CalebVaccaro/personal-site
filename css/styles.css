@@ -74,7 +74,7 @@ body {
 
 }
 
-header {
+header:not(.site-header) {
     color: #ecf0f1;
     padding: 0px 0;
     text-align: center;
@@ -83,14 +83,14 @@ header {
     /* adjust value according to your preference */
 }
 
-header a {
+header:not(.site-header) a {
     color: #ecf0f1;
     margin: 0 15px;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-header a:hover {
+header:not(.site-header) a:hover {
     color: #bdc3c7;
 }
 
@@ -659,6 +659,8 @@ li {
     justify-content: space-between;
     gap: 16px;
     padding: 10px 18px;
+    flex-wrap: wrap;
+    min-width: 0;
 }
 
 .site-header + .site-main .shell {
@@ -685,6 +687,9 @@ li {
     display: flex;
     gap: 12px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 0;
 }
 
 .main-nav .nav-link {
@@ -700,6 +705,28 @@ li {
     color: var(--text);
     background: rgba(255,255,255,0.03);
     transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .site-header .shell {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .brand .tagline {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+    }
+
+    .main-nav .nav-link {
+        padding: 8px 10px;
+    }
 }
 
 /* Hero / banner */
